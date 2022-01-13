@@ -71,6 +71,7 @@ class Poly2:
             sol1 = (-b + sqrt(d))/(2*a)
             
             print(f"(({sol1}), ({sol2}))")
+            return sol2, sol1
 
         else:
              print(f"{self.coeffs[0]} cannot be 0")
@@ -81,11 +82,16 @@ class Poly2:
         Si: x prend pour valeur 5
         Alors: y = 5^2 + 1 = 26
         """
-        pass
+        #assert type(x) is int
+        y = (x**2) + 1
+      #  print(f"y = {x}² + 1 = {y}")
+        return y
 
     def draw(self, x_points=None):
         """ Méthode qui trace la courbe, voir fichier png."""
-        pass
+        plt.plot(self.x_points.solve(), self.__val(self.x_points.solve()))
+        plt.show()
+       
 
 
 if __name__ == "__main__":
