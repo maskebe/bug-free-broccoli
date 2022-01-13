@@ -91,7 +91,7 @@ class Poly2:
     def draw(self, x_points=None):
         """ Méthode qui trace la courbe, voir fichier png."""
         for x_points in self.solve():
-            plt.plot(x_points, self.__val(x_points))
+            plt.plot(x_points, self.__val(x_points), linestyle='-')
             plt.show()
        
 
