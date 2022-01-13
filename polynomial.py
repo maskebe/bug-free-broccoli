@@ -82,15 +82,16 @@ class Poly2:
         Si: x prend pour valeur 5
         Alors: y = 5^2 + 1 = 26
         """
-        #assert type(x) is int
+        #assert type(x) is float
         y = (x**2) + 1
-      #  print(f"y = {x}² + 1 = {y}")
+        print(f"y = {x}² + 1 = {y}")
         return y
 
     def draw(self, x_points=None):
         """ Méthode qui trace la courbe, voir fichier png."""
-        plt.plot(self.x_points.solve(), self.__val(self.x_points.solve()))
-        plt.show()
+        for x_points in self.solve():
+            plt.plot(x_points, self.__val(x_points))
+            plt.show()
        
 
 
