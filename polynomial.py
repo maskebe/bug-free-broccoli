@@ -7,11 +7,19 @@ class Poly2:
 
     def __init__(self, *coeffs):
         """ Méthode constructeur qui prend en paramètre, les coefficients du polynôme"""
-        pass
+        self.coeffs = list(coeffs)
 
     def __add__(self, other):
         """Addition 2 polynômes et qui renvoi du nouveau polynôme"""
-        pass
+        assert type(other) is Poly2
+        if self.coeffs[0] != 0:
+            a = self.coeffs[0] + other.coeffs[0]
+            b = self.coeffs[1] + other.coeffs[1]
+            c = self.coeffs[2] + other.coeffs[2]
+            print(f"{a}x² + {b}x + {c}")
+            #return (self.coeffs + other.coeffs)
+        else:
+            print(f"{self.coeffs[0]} cannot be 0")
 
     def __sub__(self, other):
         """Soustraction de 2 polynômes et renvoi du nouveau polynôme"""
