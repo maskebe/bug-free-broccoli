@@ -70,8 +70,9 @@ class Poly2:
             sol2 = (-b - sqrt(d))/(2*a)
             sol1 = (-b + sqrt(d))/(2*a)
             
-            print(f"(({sol1}), ({sol2}))")
-            return sol2, sol1
+            sol = ((sol2, sol1))
+            print(f"{sol}")
+            return sol
 
         else:
              print(f"{self.coeffs[0]} cannot be 0")
